@@ -1,15 +1,16 @@
 package com.coneat.myapplication;
 
 import android.app.Activity;
+import android.app.Application;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-public class MyApplication extends Activity {
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+public class MyApplication extends Application {
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
         initNotification();
     }
 
